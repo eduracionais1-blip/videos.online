@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistir Vídeo Grátis</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            border: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .thumbnail {
+            margin-bottom: 30px;
+        }
+
+        .thumbnail img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .cta-button {
+            padding: 15px 35px;
+            font-size: 1.2em;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .social-buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .social-button:hover {
+            opacity: 0.85;
+        }
+
+        .social-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        .facebook {
+            background-color: #1877F2;
+        }
+
+        .telegram {
+            background-color: #0088CC;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Assista ao Conteúdo Agora!</h1>
+        <p>Clique no botão abaixo para liberar o vídeo e ter acesso total.</p>
+
+        <div class="thumbnail">
+            <img src="URL_DA_SUA_MINIATURA" alt="Miniatura do Vídeo">
+        </div>
+
+        <button class="cta-button" onclick="assistirVideo()">Assistir Agora</button>
+
+        <div class="social-buttons">
+            <a href="URL_DO_SEU_GRUPO_FACEBOOK" target="_blank" class="social-button facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/1920px-2023_Facebook_icon.svg.png" alt="Facebook Logo">
+                Grupo no Facebook
+            </a>
+            <a href="URL_DO_SEU_CANAL_TELEGRAM" target="_blank" class="social-button telegram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo">
+                Canal no Telegram
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function assistirVideo() {
+            // SUBSTITUA A URL ABAIXO PELA URL DO SEU ANÚNCIO
+            const urlAnuncio = 'URL_DO_SEU_ANUNCIO';
+            // URL DE INCORPORAÇÃO DO VÍDEO DO YOUTUBE
+            const urlVideo = 'https://www.youtube.com/embed/LmwtFW_L6uQ?autoplay=1';
+            
+            // Abre a URL do anúncio em uma nova aba (_blank)
+            window.open(urlAnuncio, '_blank');
+
+            // Redireciona a página atual para a URL do vídeo
+            window.location.href = urlVideo;
+        }
+    </script>
+</body>
+</html>
