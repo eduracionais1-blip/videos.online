@@ -3,147 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistir Vídeo Grátis</title>
+    <title>Sua Plataforma de Vídeos - Início</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --light-text-color: #7f8c8d;
+        }
+
         body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 20px 40px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            text-align: center;
-            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            letter-spacing: 1px;
+        }
+
+        .header .logo {
+            color: var(--primary-color);
+        }
+        
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .header a:hover {
+            background-color: #3e5163;
         }
 
         .container {
-            background-color: #ffffff;
-            padding: 40px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .footer {
+            background-color: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #e7f0f6, #d4dee6);
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-            border: 1px solid #e0e0e0;
-        }
-
-        h1 {
-            font-size: 2.2em;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.1em;
-            color: #7f8c8d;
-            margin-bottom: 30px;
-        }
-
-        .thumbnail {
-            margin-bottom: 30px;
-        }
-
-        .thumbnail img {
-            width: 150px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        .cta-button {
-            padding: 15px 35px;
-            font-size: 1.2em;
-            background-color: #e74c3c;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .cta-button:hover {
-            background-color: #c0392b;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
         
-        .social-buttons {
-            margin-top: 25px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+        .welcome-section h2 {
+            font-size: 2.8em;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .welcome-section p {
+            font-size: 1.2em;
+            color: var(--light-text-color);
         }
 
-        .social-button {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            font-size: 15px;
-            border-radius: 5px;
-            color: #fff;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        .social-button:hover {
-            opacity: 0.85;
-        }
-
-        .social-button img {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-
-        .facebook {
-            background-color: #1877F2;
-        }
-
-        .telegram {
-            background-color: #0088CC;
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header h1 {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <header class="header">
+        <h1><span class="logo">🎥</span> Sua Plataforma de Vídeos</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="recentes/page1.html">Recentes</a>
+            <a href="populares/page1.html">Populares</a>
+            <a href="categorias/page1.html">Categorias</a>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>Assista ao Conteúdo Agora!</h1>
-        <p>Clique no botão abaixo para liberar o vídeo e ter acesso total.</p>
-
-        <div class="thumbnail">
-            <img src="URL_DA_SUA_MINIATURA" alt="Miniatura do Vídeo">
-        </div>
-
-        <button class="cta-button" onclick="assistirVideo()">Assistir Agora</button>
-
-        <div class="social-buttons">
-            <a href="URL_DO_SEU_GRUPO_FACEBOOK" target="_blank" class="social-button facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/1920px-2023_Facebook_icon.svg.png" alt="Facebook Logo">
-                Grupo no Facebook
-            </a>
-            <a href="URL_DO_SEU_CANAL_TELEGRAM" target="_blank" class="social-button telegram">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo">
-                Canal no Telegram
-            </a>
-        </div>
+        <section class="welcome-section">
+            <h2>Bem-vindo à Sua Plataforma de Vídeos</h2>
+            <p>Explore nosso acervo de vídeos incríveis nas categorias acima!</p>
+        </section>
     </div>
 
-    <script>
-        function assistirVideo() {
-            // SUBSTITUA A URL ABAIXO PELA URL DO SEU ANÚNCIO
-            const urlAnuncio = 'URL_DO_SEU_ANUNCIO';
-            // URL DE INCORPORAÇÃO DO VÍDEO DO YOUTUBE
-            const urlVideo = 'https://www.youtube.com/embed/LmwtFW_L6uQ?autoplay=1';
-            
-            // Abre a URL do anúncio em uma nova aba (_blank)
-            window.open(urlAnuncio, '_blank');
+    <footer class="footer">
+        <p>&copy; 2025 Sua Plataforma de Vídeos. Todos os direitos reservados.</p>
+    </footer>
 
-            // Redireciona a página atual para a URL do vídeo
-            window.location.href = urlVideo;
-        }
-    </script>
 </body>
 </html>
